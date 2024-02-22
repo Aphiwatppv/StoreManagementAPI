@@ -71,6 +71,7 @@
     <Build Include="dbo\StoredProcedures\spIncreaseStock.sql" />
     <Build Include="dbo\StoredProcedures\spDecreaseStock.sql" />
     <Build Include="dbo\StoredProcedures\spGetProductsCloseToAlertLimit.sql" />
+    <Build Include="dbo\StoredProcedures\spUpdateProductPrice.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StoreManagementDB.publish.xml" />

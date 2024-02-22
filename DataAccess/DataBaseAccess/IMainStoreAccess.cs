@@ -12,4 +12,5 @@ public interface IMainStoreAccess
     Task<MainStoreItems?> spGetRemainingStockByProductName(string name);
     Task spIncreaseStock(int prodcutid, int amount);
     Task spRemoveProduct(int ID);
+    Task spUpdateProductPrice(int prodcutid, decimal newprice);
 }

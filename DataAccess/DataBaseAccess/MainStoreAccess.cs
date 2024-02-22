@@ -58,19 +58,23 @@ public class MainStoreAccess : IMainStoreAccess
 
     public async Task spRemoveProduct(int ID)
     {
-        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spRemoveProduct", new { productID = ID });
+        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spRemoveProduct", new { ProductID = ID });
     }
 
     public async Task spIncreaseStock(int prodcutid, int amount)
     {
-        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spIncreaseStock", new { prodcutID = prodcutid, Amount = amount });
+        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spIncreaseStock", new { ProductID = prodcutid, Amount = amount });
     }
 
     public async Task spDecreaseStock(int prodcutid, int amount)
     {
-        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spDecreaseStock", new { prodcutID = prodcutid, Amount = amount });
+        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spDecreaseStock", new { ProductID = prodcutid, Amount = amount });
     }
 
+    public async Task spUpdateProductPrice(int prodcutid, decimal newprice)
+    {
+        await _sqlDataAceess.Savedata(storedprocedures: "dbo.spUpdateProductPrice", new { ProductID = prodcutid, Newprice = newprice });
+    }
 
     #endregion
 
